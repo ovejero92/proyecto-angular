@@ -30,9 +30,13 @@
                 text-decoration: none;
                 color: inherit;
                 transition: background-color 0.3s;
-
+                i{
+                    padding-right: 8px;
+                    font-size: 20px;
+                }
                 &:hover {
                     background-color: darken($sidebar-bg-color, 10%);
+                    margin-left: 10px;
                 }
             }
         }
