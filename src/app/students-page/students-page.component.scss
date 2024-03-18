@@ -1,0 +1,38 @@
+@import '../../assets/scss/mixins';
+ h1{
+    color: white;
+    padding-left: 60px;
+ }
+.table {
+
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid $cell-border-color;
+    border-radius: 5px;
+    margin: 0 auto;
+    .row {
+        display: flex;
+
+        &:nth-child(even) {
+            background-color: $table-bg-color;
+        }
+        .cell {
+            flex: 1;
+            padding: $cell-padding;
+            border: 1px solid $cell-border-color;
+            background-color: $cell-bg-color;
+            text-align: center;
+            &:hover{
+                background-color: #0a141d;
+                color: beige;
+            }
+        }
+    }
+
+    .header {
+        background-color: #007bff;
+        color: black;
+        font-weight: bold;
+        text-shadow: 0px 0px 10px  #0a141d;
+    }
+}

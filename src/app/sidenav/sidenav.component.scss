@@ -1,0 +1,40 @@
+@import '../../assets/scss/_mixins';
+
+.sidebar {
+    width: $sidebar-width;
+    height: 65vh;
+    background-color: $sidebar-bg-color;
+    color: $sidebar-text-color;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+
+    .logo {
+        margin-top: 20px;
+        text-align: center;
+        img{
+            width: 120px;
+        }
+    }
+
+    .menu {
+        list-style: none;
+        padding: 0;
+
+        li {
+            a {
+                display: block;
+                padding: $menu-item-padding;
+                text-decoration: none;
+                color: inherit;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: darken($sidebar-bg-color, 10%);
+                }
+            }
+        }
+    }
+}
