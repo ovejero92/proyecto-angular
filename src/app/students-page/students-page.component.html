@@ -1,4 +1,10 @@
-<h1>Tabla de alumnos divicion numero: 131514</h1>
+<h2>Tabla de alumnos Angular</h2>
+<div class="comis"><span>Comision numero:</span>
+<select (change)="onSelectChange($event)">
+    <option value="2513">2513</option>
+    <option value="1323">1323</option>
+    <option value="3513">3513</option>
+</select></div>
 <div class="table">
     <div class="row header">
         <div class="cell"></div>
@@ -7,86 +13,54 @@
         <div class="cell">Edad</div>
         <div class="cell">Género</div>
         <div class="cell">Grado</div>
+        <div class="cell">Estado</div>
     </div>
-    <div class="row">
-        <div class="cell">1</div>
-        <div class="cell">Juan</div>
-        <div class="cell">Pérez</div>
-        <div class="cell">15</div>
-        <div class="cell">Masculino</div>
-        <div class="cell">10mo</div>
-    </div>
-    <div class="row">
-        <div class="cell">2</div>
-        <div class="cell">María</div>
-        <div class="cell">González</div>
-        <div class="cell">14</div>
-        <div class="cell">Femenino</div>
-        <div class="cell">9no</div>
-    </div>
-    <div class="row">
-        <div class="cell">3</div>
-        <div class="cell">Rodrigo</div>
-        <div class="cell">Gimenez</div>
-        <div class="cell">18</div>
-        <div class="cell">Masculino</div>
-        <div class="cell">9no</div>
-    </div>
-    <div class="row">
-        <div class="cell">4</div>
-        <div class="cell">Gustavo</div>
-        <div class="cell">Ovejero</div>
-        <div class="cell">15</div>
-        <div class="cell">Masculino</div>
-        <div class="cell">9no</div>
-    </div>
-    <div class="row">
-        <div class="cell">5</div>
-        <div class="cell">Laura</div>
-        <div class="cell">González</div>
-        <div class="cell">17</div>
-        <div class="cell">Femenino</div>
-        <div class="cell">9no</div>
-    </div>
-    <div class="row">
-        <div class="cell">6</div>
-        <div class="cell">Tadeo</div>
-        <div class="cell">Hutson</div>
-        <div class="cell">16</div>
-        <div class="cell">masculino</div>
-        <div class="cell">9no</div>
-    </div>
-    <div class="row">
-        <div class="cell">7</div>
-        <div class="cell">Martin</div>
-        <div class="cell">Samuel</div>
-        <div class="cell">19</div>
-        <div class="cell">Masculino</div>
-        <div class="cell">9no</div>
-    </div>
-    <div class="row">
-        <div class="cell">8</div>
-        <div class="cell">Nael</div>
-        <div class="cell">Fernandez</div>
-        <div class="cell">19</div>
-        <div class="cell">Masculino</div>
-        <div class="cell">9no</div>
-    </div>
-    <div class="row">
-        <div class="cell">9</div>
-        <div class="cell">Carolina</div>
-        <div class="cell">Paes</div>
-        <div class="cell">17</div>
-        <div class="cell">Femenino</div>
-        <div class="cell">6no</div>
-    </div>
-    <div class="row">
-        <div class="cell">10</div>
-        <div class="cell">Taiel</div>
-        <div class="cell">Perez</div>
-        <div class="cell">15</div>
-        <div class="cell">Masculino</div>
-        <div class="cell">9no</div>
-    </div>
+    @switch (status) {
+        @case ('3513') {
+        <div class="row" *ngFor="let student of bd_3513; let i = index">
+        <div class="cell">{{i + 1}}</div>
+        <div [ngClass]="student.estado == true ? 'cellA' : 'cellD'">{{student.nombre}}</div>
+        <div [ngClass]="student.estado == true ? 'cellA' : 'cellD'">{{student.apellido}}</div>
+        <div [ngClass]="student.estado == true ? 'cellA' : 'cellD'">{{student.edad}}</div>
+        <div [ngClass]="student.estado == true ? 'cellA' : 'cellD'">{{student.genero}}</div>
+        <div [ngClass]="student.estado == true ? 'cellA' : 'cellD'">{{student.grado}}</div>
+        @if (student.estado == true) {
+        <div class="cellA">Aprobado</div>
+        } @else {
+        <div class="cellD">Desaprobado</div>
+        }
+        </div>
+        }
+        @case ('2513') {
+        <div class="row" *ngFor="let student of bd_2513; let i = index">
+        <div class="cell">{{i + 1}}</div>
+        <div [ngClass]="student.estado == true ? 'cellA' : 'cellD'">{{student.nombre}}</div>
+        <div [ngClass]="student.estado == true ? 'cellA' : 'cellD'">{{student.apellido}}</div>
+        <div [ngClass]="student.estado == true ? 'cellA' : 'cellD'">{{student.edad}}</div>
+        <div [ngClass]="student.estado == true ? 'cellA' : 'cellD'">{{student.genero}}</div>
+        <div [ngClass]="student.estado == true ? 'cellA' : 'cellD'">{{student.grado}}</div>
+        @if (student.estado == true) {
+        <div class="cellA">Aprobado</div>
+        } @else {
+        <div class="cellD">Desaprobado</div>}
+        </div>    
+        }
+        @case ('1323') {
+        <div class="row" *ngFor="let student of bd_1323; let i = index">
+        <div class="cell">{{i + 1}}</div>
+        <div [ngClass]="student.estado == true ? 'cellA' : 'cellD'">{{student.nombre}}</div>
+        <div [ngClass]="student.estado == true ? 'cellA' : 'cellD'">{{student.apellido}}</div>
+        <div [ngClass]="student.estado == true ? 'cellA' : 'cellD'">{{student.edad}}</div>
+        <div [ngClass]="student.estado == true ? 'cellA' : 'cellD'">{{student.genero}}</div>
+        <div [ngClass]="student.estado == true ? 'cellA' : 'cellD'">{{student.grado}}</div>
+        @if (student.estado == true) {
+        <div class="cellA">Aprobado</div>
+        } @else {
+        <div class="cellD">Desaprobado</div>
+        }
+        </div>
+        }
+    }
+
     <!-- Añadir más filas según sea necesario -->
 </div>

@@ -1,0 +1,12 @@
+[
+    {"id":1,"nombre":"Juan","apellido":"Pérez","edad":15,"genero":"Masculino","grado":"10mo"},
+    {"id":2,"nombre":"Maria","apellido":"González","edad":14,"genero":"Femenino","grado":"9no"},
+    {"id":3,"nombre":"Rodrigo","apellido":"Gimenez","edad":18,"genero":"Masculino","grado":"9no"},
+    {"id":4,"nombre":"Gustavo","apellido":"Ovejero","edad":15,"genero":"Masculino","grado":"9no"},
+    {"id":5,"nombre":"Laura","apellido":"González","edad":17,"genero":"Femenino","grado":"9no"},
+    {"id":6,"nombre":"Tadeo","apellido":"Hutson","edad":16,"genero":"Masculino","grado":"9no"},
+    {"id":7,"nombre":"Martin","apellido":"Samuel","edad":19,"genero":"Masculino","grado":"9no"},
+    {"id":8,"nombre":"Nael","apellido":"Fernandez","edad":19,"genero":"Masculino","grado":"9no"},
+    {"id":9,"nombre":"Carolina","apellido":"Paes","edad":17,"genero":"Femenino","grado":"6no"},
+    {"id":10,"nombre":"Taiel","apellido":"Perez","edad":15,"genero":"Masculino","grado":"10mo"}
+]
